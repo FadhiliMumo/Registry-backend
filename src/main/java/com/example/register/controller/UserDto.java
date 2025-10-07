@@ -5,7 +5,7 @@ import org.springframework.data.annotation.Id;
 public class UserDto{
     private String name;
     @Id
-    private Long phoneNumber;
+    private String phoneNumber;
     private String date;
 
     public String getName(){
@@ -20,10 +20,10 @@ public class UserDto{
     public void setDate(String date) {
         this.date = date;
     }
-    public Long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
-    public void setPhoneNumber(Long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 }

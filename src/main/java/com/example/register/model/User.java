@@ -1,16 +1,14 @@
 package com.example.register.model;
 
-import org.springframework.data.annotation.Id;
 import jakarta.persistence.*;
-
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name="Users")
 public class User{
-    private String name;
     @Id
-    private Long phoneNumber;
+    private String phone;
+
+    private String name;
     private String date;
 
    public User(){}
@@ -26,10 +24,10 @@ public class User{
     public void setDate(String date) {
         this.date = date;
     }
-    public Long getPhoneNumber() {
-        return phoneNumber;
+    public String getPhone() {
+        return phone;
     }
-    public void setPhoneNumber(Long phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
